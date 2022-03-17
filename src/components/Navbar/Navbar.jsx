@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import {FaBars} from 'react-icons/fa'
+
+
+import {tablette, mobile} from '../../services/Responsive';
+import SideBar from "../SideBare/SideBar";
+
+
 function Navbar() {
+  const [showSidebar , setShowSidebar] = useState(false);
   return (
     <Wrapper>
-      <Left>
         <Logo>
-          <Icon src="assets/images/logo.png" alt="log" />
+          <Icon src="assets/images/gericht.png" alt="log" />
         </Logo>
-      </Left>
-      <Center>
-        <Menu>
+        <Menu className = '_flex_center'>
           <MenuItem>
             <LinkItem>Home</LinkItem>
           </MenuItem>
@@ -17,7 +22,7 @@ function Navbar() {
             <LinkItem>Pages</LinkItem>
           </MenuItem>
           <MenuItem>
-            <LinkItem>Contact Us</LinkItem>
+            <LinkItem>Contact</LinkItem>
           </MenuItem>
           <MenuItem>
             <LinkItem>Blog</LinkItem>
@@ -26,18 +31,19 @@ function Navbar() {
             <LinkItem>Landing</LinkItem>
           </MenuItem>
         </Menu>
-      </Center>
-      <Right>
-          <Authetification>
+        <Authetification>
               <LinkItem>Register</LinkItem>
                / 
               <LinkItem>Log in</LinkItem>
-          </Authetification>
-          <Separator></Separator>
-          <Booktable>
+              <Separator></Separator>
               <LinkItem>Book Table</LinkItem>
-          </Booktable>
-      </Right>
+        </Authetification>
+        <Actions>
+           <ShowMenuBtn onClick={() => setShowSidebar(true)}>
+                <FaBars/>
+           </ShowMenuBtn>
+        </Actions>
+        <SideBar show = {showSidebar} close = {() => {setShowSidebar(false)}}/>
     </Wrapper>
   );
 }
@@ -47,38 +53,32 @@ export default Navbar;
 const Wrapper = styled.nav`
 display: flex;
 aign-items: center;
-background: black;
+background: var(--color-black);
 max-height: 120px:
-align-items:center;
 justify-content: space-between;
 padding: 20PX 50px;
+${mobile({padding: '10px 15px'})}
 `;
 
-const Left = styled.div`
-  flex: 1;
-  
-`;
-const Center = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  aign-items: center;
-  
-`;
+
 
 const Logo = styled.div`
-  width: 200px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  ${mobile({width: '70px'})}
 `;
 
 const Icon = styled.img`
-  max-width: 100%;
+  max-width: 80%;
 `;
 
+
+
+
 const Menu = styled.ul`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  flex: 1;
+  ${tablette({display: 'none'})}
 `;
 
 const MenuItem = styled.li``;
@@ -89,12 +89,15 @@ const LinkItem = styled.a`
   font-size: 0.7rem;
   text-align: center;
   position: relative;
+  color: var(--color-crimson);
+  ${mobile({padding: '5px'})}
+  
 
   ::before {
       content: '';
       width: 0%;
       height: 2px;
-      background: var(--main-gold);
+      background: var(--color-gold);
       position: absolute;
       top:0;
       left:0;
@@ -102,7 +105,7 @@ const LinkItem = styled.a`
   }
   :hover{
       background: rgba(255, 255, 255, 0.3);
-      color: var(--main-gold);
+      color: var(--color-gold);
   }
 
   :hover::before{
@@ -110,27 +113,34 @@ const LinkItem = styled.a`
   }
 `;
 
-const Right = styled.div`
-  flex: 1;
-  display: flex;
-  align-items:center;
-  justify-content: flex-end;
-  color: white;
-  
-`;
-
 const Authetification = styled.div`
+flex:1;
 display: flex;
 align-items:center;
+justify-content: flex-end;
+${tablette({justifyContent: 'center', flex: 3})}
 
 `
 
 const Separator = styled.div`
-height: 50%;
-background: rgba(255, 255, 255, 0.1);
+height: 30px;
+background: rgba(255, 255, 255, 0.2);
 width: 2px;
 margin: 0 20px;
+${mobile({margin: '0px 5px'})}
 `
+const Actions = styled.div`
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+display: none;
+${tablette({display: 'flex'})}
+`
+const ShowMenuBtn = styled.button`
+background: transparent;
+color: white;
+border: none;
+font-size: 22px;
 
-const Booktable = styled.div`
 `

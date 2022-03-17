@@ -13,14 +13,15 @@
   --font-cormorant : 'Cormorant Garamond', serif;
 
 }
-*,
-*::before,
-*::after {
+
+*{
   box-sizing: border-box;
+  margin:0;
+  padding:0;
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--font-cormorant);
 }
 
 html{
@@ -28,13 +29,40 @@ html{
 }
 
 a{
+  text-decoration: none;
   cursor: pointer;
   transition: var(-main-transition);
   color: inherit;
+}
+
+button {
+  transition: var(--main-transition);
+  cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
 ul {
   padding: 0;
   margin:0;
   list-style: none;
+}
+
+
+._flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+._gold_btn {
+  background: var(--color-gold);
+  color: var(--color-black);
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+._gold_btn:hover{
+  transform: scale(1.1);
 }
