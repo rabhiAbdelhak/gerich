@@ -61,6 +61,7 @@ ul {
   color: var(--color-black);
   padding: 10px 20px;
   font-weight: bold;
+  font-family: var(--font-cormorant);
 }
 
 ._gold_btn:hover{

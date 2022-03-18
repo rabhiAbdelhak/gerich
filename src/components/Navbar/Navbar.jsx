@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {FaBars} from 'react-icons/fa'
 
 
-import {tablette, mobile} from '../../services/Responsive';
+import {tablette, mobile, miniMobile} from '../../services/Responsive';
 import SideBar from "../SideBare/SideBar";
 
 
@@ -58,6 +58,7 @@ max-height: 120px:
 justify-content: space-between;
 padding: 20PX 50px;
 ${mobile({padding: '10px 15px'})}
+${miniMobile({padding: '8px'})}
 `;
 
 

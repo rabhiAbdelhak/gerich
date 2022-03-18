@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {tablette, mobile} from '../../services/Responsive';
+import {tablette, mobile, miniMobile} from '../../services/Responsive';
 
 function Header() {
   return (
@@ -32,8 +32,9 @@ background: var(--color-black);
 color: white;
 display: flex;
 align-items: center;
-${mobile({flexDirection: 'column-reverse', padding: '50px 40px 100px'})}
 ${tablette({padding: '50px 40px 60px'})}
+${mobile({flexDirection: 'column-reverse', padding: '50px 40px 100px'})}
+${miniMobile({padding: '50px 10px'})}
 `
 
 const Text = styled.div`
@@ -45,6 +46,7 @@ margin-left: 100px;
 max-width: 50%;
 position: relative;
 ${mobile({maxWidth: '70%', margin:'0 0 40px 0'})};
+${miniMobile({maxWidth: '90%'})}
 
 ::after{
   content:"";

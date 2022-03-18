@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {mobile} from '../../services/Responsive'
+import {mobile, miniMobile} from '../../services/Responsive'
 
 function About() {
   return (
@@ -8,7 +8,7 @@ function About() {
       <ImageCenter src="assets/images/aboutg.png" alt="centerimage" />
       <TextLeft>
         <Title>About Us</Title>
-        <Line src="assets/images/spoon.svg" alt='spoon'/>
+        <Line src="assets/images/spoon.svg" alt='spoon' right/>
         <Paragraph>
           This website is building with reactjs and styled components as a css
           library. If you have any question about the code source or any other
@@ -38,6 +38,7 @@ const Wrapper = styled.div`
   padding: 50px;
   position: relative;
   color: white;
+  ${miniMobile({padding: '10px'})}
   ${mobile({flexDirection: 'column'})}
 `;
 const ImageCenter = styled.img`
@@ -60,7 +61,9 @@ const Image = styled.img`
 height: 500px;
 margin: 0 40px;
 position: relative;
-${mobile({transform: 'rotate(270deg)', margin: 0, height:'90vw'})}
+${mobile({transform: 'rotate(270deg)', margin: '-100px 0', height:'90vw'})}
+${miniMobile({margin:'-50px 0'})}
+
 `
 const TextRight = styled.div`
   text-align: left;
@@ -74,7 +77,9 @@ const Title = styled.h1`
   font-size: 50px;
 `;
 
-const Line = styled.img``;
+const Line = styled.img`
+${props => props.right ? 'transform: rotate(180deg)' : ''};
+`;
 
 const Paragraph = styled.p`
 color: var(--color-grey);

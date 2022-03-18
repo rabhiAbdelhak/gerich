@@ -1,5 +1,12 @@
 import {css} from 'styled-components';
 
+export const miniMobile = (props) => {
+    return css`
+    @media (max-width: 300px){
+        ${props}
+    }
+    `
+}
 
 export const mobile = (props) => {
     return css`
