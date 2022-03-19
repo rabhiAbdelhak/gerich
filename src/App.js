@@ -1,7 +1,8 @@
 import './App.css';
-import {Navbar, Header, About} from './components'
-import ChefWord from './components/ChefWord/ChefWord';
-import SpecialMenu from './components/SpecialMenu/SpecialMenu';
+
+//local imports 
+import {Navbar, Header, About, Laurel, ChefWord, SpecialMenu, Video} from './components'
+
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       <About/>
       <SpecialMenu/>
       <ChefWord/>
+      <Video/>
+      <Laurel/>
     </>
   );
 }

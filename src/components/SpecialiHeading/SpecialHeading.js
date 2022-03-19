@@ -25,6 +25,7 @@ const Title = styled.h1`
 color: white;
 margin: 0;
 text-transform: capitalize;
+letter-spacing: 2px;
 `
 
 const Icon = styled.img`

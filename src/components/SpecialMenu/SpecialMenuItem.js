@@ -52,4 +52,8 @@ const Separator = styled.div`
 `;
 const Price = styled.p`
   color: var(--color-white);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 1.5rem;
 `;

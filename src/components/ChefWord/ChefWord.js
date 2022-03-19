@@ -44,12 +44,11 @@ const Image = styled.img`
 flex: 1;
 max-width: 450px;
 margin-right: 40px;
-${tablette({maxWidth: '380px'})}
-${mobile({maxWidth: '90%'})}
+${tablette({maxWidth: '320px'})};
+${mobile({maxWidth: '90%', margin: 0})};
 `
 
 const Text = styled.div`
-
 ${mobile({textAlign: 'center', marginTop: '50px'})};
 `
 const Title = styled.h1`

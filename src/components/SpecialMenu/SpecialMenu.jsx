@@ -53,7 +53,8 @@ const Title = styled.h1`
 `;
 
 const Menu = styled.div`
-flex: 1;`;
+flex: 1;
+${tablette({width: '100%'})}`;
 
 const MenuTitle = styled.h1`
 color:var(--color-white);

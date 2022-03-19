@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import {mobile, miniMobile} from '../../services/Responsive'
+import {mobile, miniMobile} from '../../services/Responsive';
+import {images} from '../../Data';
 
 function About() {
   return (
     <Wrapper className="_flex_center">
-      <ImageCenter src="assets/images/aboutg.png" alt="centerimage" />
+      <ImageCenter src={images.aboutg} alt="centerimage" />
       <TextLeft>
         <Title>About Us</Title>
-        <Line src="assets/images/spoon.svg" alt='spoon' right/>
+        <Line src={images.spoon} alt='spoon' right/>
         <Paragraph>
           This website is building with reactjs and styled components as a css
           library. If you have any question about the code source or any other
@@ -16,10 +17,10 @@ function About() {
         </Paragraph>
         <Button className='_gold_btn'>Know More</Button>
       </TextLeft>
-      <Image src='assets/images/knife.png' alt='knifeimage'/>
+      <Image src={images.knife} alt='knifeimage'/>
       <TextRight>
         <Title>Our History</Title>
-        <Line src="assets/images/spoon.png " alt='spoon' />
+        <Line src={images.spoon} alt='spoon' />
         <Paragraph>
           This website is building with reactjs and styled components as a css
           library. If you have any question about the code source or any other
