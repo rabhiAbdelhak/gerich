@@ -34,6 +34,7 @@ ${mobile({marginBottom: '20px', marginRight: 0})}
 `
 const Info = styled.div`
 flex: 1;
+${mobile({textAlign: 'center'})};
 `
 const Title = styled.p`
 color: var(--color-gold);

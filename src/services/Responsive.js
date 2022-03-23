@@ -2,7 +2,7 @@ import {css} from 'styled-components';
 
 export const miniMobile = (props) => {
     return css`
-    @media (max-width: 300px){
+    @media (max-width: 350px){
         ${props}
     }
     `

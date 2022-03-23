@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components';
 
+
 //local imports
 import SpecialHeading from '../SpecialiHeading/SpecialHeading'
 import {images, data} from '../../Data';
 import SingleAward from './SingleAward';
 import {tablette, mobile} from '../../services/Responsive';
+
 
 function Laurel() {
   return (
@@ -15,8 +17,8 @@ function Laurel() {
           <SpecialHeading title='Awards And Recognition' alignement='left'/>
           <Title>Our Laurel</Title>
           <Boxes>
-            {data.awards.map(award => {
-              return <SingleAward {...award} />
+            {data.awards.map((award, index) => {
+              return <SingleAward key={index} {...award} />
             })}
           </Boxes>
         </Awards>
@@ -32,7 +34,6 @@ padding: 50px 150px;
 position: relative;
 background-image: url('assets/images/bg.png');
 ${tablette({flexDirection:'column-reverse', padding :'50px'})};
-
 `
 
 const Logo = styled.img`
