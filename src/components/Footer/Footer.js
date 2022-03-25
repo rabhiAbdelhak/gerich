@@ -4,7 +4,7 @@ import {FaInstagram, FaFacebook, FaTwitter} from 'react-icons/fa';
 
 // local imports 
 import {images} from '../../Data';
-import {mobile, tablette} from '../../services/Responsive';
+import {mobile} from '../../services/Responsive';
 
 function Footer() {
   return (

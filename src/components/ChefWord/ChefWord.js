@@ -4,7 +4,7 @@ import styled from 'styled-components';
 //local imports
 import { images } from '../../Data';
 import SpecialHeading from '../SpecialiHeading/SpecialHeading';
-import {tablette, mobile, miniMobile} from '../../services/Responsive';
+import {tablette, mobile} from '../../services/Responsive';
 
 function ChefWord() {
   return (

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { images , data} from "../../Data/index";
 import SpecialHeading from "../SpecialiHeading/SpecialHeading";
 import SpecialMenuItem from "./SpecialMenuItem";
-import {tablette, mobile, miniMobile} from '../../services/Responsive';
+import {tablette, mobile} from '../../services/Responsive';
 
 function SpecialMenu() {
   return (

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 //local imports 
 import SpecialHeading from '../SpecialiHeading/SpecialHeading';
-import {mobile, tablette} from '../../services/Responsive';
+import {mobile} from '../../services/Responsive';
 
 function NewsLetter() {
   return (

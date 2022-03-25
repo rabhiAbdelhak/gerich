@@ -3,7 +3,6 @@ import './App.css';
 //local imports 
 import {Navbar, Header, About, Laurel, ChefWord, SpecialMenu, Video, Gallery, Contact, NewsLetter, Footer} from './components'
 
-
 function App() {
   return (
     <>
